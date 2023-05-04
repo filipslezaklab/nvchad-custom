@@ -5,7 +5,9 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
---
+
+vim.fn.system { "git", "-C", "lua/custom", "pull"}
+
 if vim.g.neovide then
 
   vim.opt.guifont = { "JetBrainsMono Nerd Font", "h10" }
