@@ -98,6 +98,12 @@ local plugins = {
     'mattn/emmet-vim',
   },
 
+  -- highlights for github actions
+  {
+    "yasuhiroki/github-actions-yaml.vim",
+    ft = {"yml"},
+  }
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
