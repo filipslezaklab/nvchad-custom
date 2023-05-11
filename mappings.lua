@@ -63,4 +63,37 @@ M.fzf = {
   },
 }
 
+M.rustTools = {
+  n = {
+    ["<leader>K"] = {
+      function()
+        local rt = require "rust-tools"
+        rt.hover_actions.hover_actions()
+      end,
+      "Hover actions",
+    },
+    ["<leader>ac"] = {
+      function()
+        local rt = require "rust-tools"
+        rt.code_action_group.code_action_group()
+      end,
+      "Code actions",
+    },
+    ["<leader>md"] = {
+      function()
+        local rt = require "rust-tools"
+        rt.move_item.move_item(false)
+      end,
+      "Move item down",
+    },
+    ["<leader>mu"] = {
+      function()
+        local rt = require "rust-tools"
+        rt.move_item.move_item(true)
+      end,
+      "Move item up"
+    },
+  },
+}
+
 return M
