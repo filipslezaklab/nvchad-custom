@@ -96,6 +96,8 @@ local plugins = {
   -- emmet
   {
     "mattn/emmet-vim",
+    lazy = false,
+    enabled = true,
   },
 
   -- highlights for github actions
