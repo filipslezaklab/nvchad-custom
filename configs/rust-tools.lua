@@ -6,8 +6,8 @@ local options = {
     on_attach = chad_on_attach,
     capabilities,
     procMacro = {
-      enable = true
-    }
+      enable = true,
+    },
   },
 }
 return options

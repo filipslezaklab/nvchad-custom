@@ -2,12 +2,14 @@
 local M = {}
 
 M.general = {
+  plugin = false,
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
 }
 
 M.dap = {
+  plugin = true,
   n = {
     ["<leader>db"] = {
       "<cmd> DapToggleBreakpoint <CR>",
@@ -25,6 +27,7 @@ M.dap = {
 }
 
 M.crates = {
+  plugin = true,
   n = {
     ["<leader>rcu"] = {
       function()
@@ -36,6 +39,7 @@ M.crates = {
 }
 
 M.spectre = {
+  plugin = true,
   n = {
     ["<leader>S"] = {
       function()
@@ -53,6 +57,7 @@ M.spectre = {
 }
 
 M.fzf = {
+  plugin = true,
   n = {
     ["<leader>gp"] = {
       function()
@@ -64,6 +69,7 @@ M.fzf = {
 }
 
 M.rustTools = {
+  plugin = true,
   n = {
     ["<leader>K"] = {
       function()
@@ -91,7 +97,31 @@ M.rustTools = {
         local rt = require "rust-tools"
         rt.move_item.move_item(true)
       end,
-      "Move item up"
+      "Move item up",
+    },
+  },
+}
+
+M.harpoon = {
+  plugin = true,
+  n = {
+    ["<leader>h"] = {
+      function()
+        local ui = require "harpoon.ui"
+        ui.toggle_quick_menu()
+      end,
+    },
+    ["<leader>hj"] = {
+      function()
+        local ui = require "harpoon.ui"
+        ui.nav_next()
+      end,
+    },
+    ["<leader>hk"] = {
+      function()
+        local ui = require "harpoon.ui"
+        ui.nav_perv()
+      end,
     },
   },
 }

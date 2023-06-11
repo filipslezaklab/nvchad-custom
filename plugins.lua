@@ -115,6 +115,22 @@ local plugins = {
     "ibhagwan/fzf-lua",
   },
 
+  {
+    "ThePrimeagen/harpoon",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      local harpoon = require "harpoon"
+      harpoon.setup()
+    end,
+    enabled = true,
+    lazy = false,
+  },
+
+  {
+    "NvChad/nvterm",
+    enabled = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
