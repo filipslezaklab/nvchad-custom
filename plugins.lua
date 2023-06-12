@@ -103,12 +103,16 @@ local plugins = {
   -- highlights for github actions
   {
     "yasuhiroki/github-actions-yaml.vim",
-    ft = { "yml" },
+    ft = { "yml", "yaml" },
+    enabled = true,
+    lazy = false,
   },
 
   -- spectre for better search and replace operations
   {
     "nvim-pack/nvim-spectre",
+    enabled = true,
+    lazy = false,
   },
 
   {
