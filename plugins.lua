@@ -54,6 +54,7 @@ local plugins = {
     end,
     config = function(_, opts)
       require("rust-tools").setup(opts)
+      vim.g.rustfmt_autosave = 1
     end,
   },
 

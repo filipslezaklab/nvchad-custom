@@ -8,8 +8,6 @@
 
 vim.fn.system { "git", "-C", "lua/custom", "pull" }
 
-vim.g.rustfmt_autosave = 1
-
 if vim.g.neovide then
   vim.opt.guifont = { "JetBrainsMono Nerd Font", "h10" }
   vim.g.neovide_refresh_rate = 144
