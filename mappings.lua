@@ -103,25 +103,27 @@ M.rustTools = {
 }
 
 M.harpoon = {
-  plugin = true,
   n = {
     ["<leader>h"] = {
       function()
         local ui = require "harpoon.ui"
         ui.toggle_quick_menu()
       end,
+      "Toggle harpoon UI",
     },
     ["<leader>hj"] = {
       function()
         local ui = require "harpoon.ui"
         ui.nav_next()
       end,
+      "Next harpoon",
     },
     ["<leader>hk"] = {
       function()
         local ui = require "harpoon.ui"
         ui.nav_perv()
       end,
+      "Pervious harpoon",
     },
   },
 }

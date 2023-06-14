@@ -50,7 +50,8 @@ local plugins = {
     ft = { "rust" },
     dependencies = "neovim/nvim-lspconfig",
     opts = function()
-      return require "custom.configs.rust-tools"
+      local opts = require "custom.configs.rtools"
+      return opts
     end,
     config = function(_, opts)
       require("rust-tools").setup(opts)
@@ -118,6 +119,8 @@ local plugins = {
 
   {
     "ibhagwan/fzf-lua",
+    enabled = true,
+    lazy = false,
   },
 
   {
