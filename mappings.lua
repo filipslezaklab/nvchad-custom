@@ -2,14 +2,12 @@
 local M = {}
 
 M.general = {
-  plugin = false,
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
   },
 }
 
 M.dap = {
-  plugin = true,
   n = {
     ["<leader>db"] = {
       "<cmd> DapToggleBreakpoint <CR>",
@@ -27,7 +25,6 @@ M.dap = {
 }
 
 M.crates = {
-  plugin = true,
   n = {
     ["<leader>rcu"] = {
       function()
@@ -39,15 +36,14 @@ M.crates = {
 }
 
 M.spectre = {
-  plugin = true,
   n = {
-    ["<leader>S"] = {
+    ["<leader>sp"] = {
       function()
         require("spectre").open()
       end,
       "Open Spectre",
     },
-    ["<leader>sp"] = {
+    ["<leader>sc"] = {
       function()
         require("spectre").open_file_search { select_word = true }
       end,
@@ -57,7 +53,6 @@ M.spectre = {
 }
 
 M.fzf = {
-  plugin = true,
   n = {
     ["<leader>gp"] = {
       function()
@@ -69,7 +64,6 @@ M.fzf = {
 }
 
 M.rustTools = {
-  plugin = true,
   n = {
     ["<leader>K"] = {
       function()
